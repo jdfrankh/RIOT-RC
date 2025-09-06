@@ -1,4 +1,4 @@
-#### RIOT-RC
+### RIOT-RC
 This library contains hardware and software files for Robo RIOT's Rc controllers. These sets are meant to control 1lb, 3lb, and possibly 5lb robotics in a compact package, allowing any individual to easily create their own open-source battle bot electronics set.  
 
 
@@ -58,4 +58,18 @@ The brushed motors are programmed to act as a drive, moving according to a two w
 
 ## Simple edits - Uploading Sketches
 
-Many values as of right now are hard-coded into the remote
+Many values as of right now are hard-coded into the remote or receiver to change, and most of those changes can be altered by re-flashing them. The software was created in PlatoformIO, and integrated IDE into VSCode for microcontrollers. Many resources are avaliable for you to download and operate the software.
+
+Once PlatformIO has been downloaded, clone the repository and naviage to /RIOT-RC/PlatformIO Imports/ and select the platoformIO directory. 
+
+**Caution**: The receiver is attached to the battery voltage. **FOR THE RECEIVER DO NOT ATTACH A USB WHILE A LIPO BATTERY IS ATTACHED. YOU WILL FRY YOUR USB PORT AND YOUR COMPUTER**
+
+Most easily accessible commands will be placed at the top of main.cpp for ease of access. Alterations from the basic control scheme will be implemented later. 
+
+<img width="1089" height="575" alt="Screenshot 2025-09-06 at 1 55 30 AM" src="https://github.com/user-attachments/assets/51247b05-15dc-4710-8b34-08ba830c4c66" />
+
+# Battery Charging
+
+The Remote has a one cell battery charger. Simply attach the charger to your USB to recharge it.
+
+
