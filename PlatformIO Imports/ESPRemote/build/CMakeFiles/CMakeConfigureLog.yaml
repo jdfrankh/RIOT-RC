@@ -1,0 +1,1447 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Darwin - 24.2.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-TMPzWl"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-TMPzWl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-TMPzWl'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1294a/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1294a.dir/build.make CMakeFiles/cmTC_1294a.dir/build
+        Building C object CMakeFiles/cmTC_1294a.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_1294a.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_1294a.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_1294a/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-cj9kOw"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-cj9kOw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-cj9kOw'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_86f1f/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_86f1f.dir/build.make CMakeFiles/cmTC_86f1f.dir/build
+        Building C object CMakeFiles/cmTC_86f1f.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_86f1f.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-cj9kOw/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_86f1f.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_86f1f/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-s4xBRn"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-s4xBRn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-s4xBRn'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7cd76/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7cd76.dir/build.make CMakeFiles/cmTC_7cd76.dir/build
+        Building C object CMakeFiles/cmTC_7cd76.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_7cd76.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_7cd76.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_7cd76/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-6H7l8p"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-6H7l8p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-6H7l8p'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_de052/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_de052.dir/build.make CMakeFiles/cmTC_de052.dir/build
+        Building C object CMakeFiles/cmTC_de052.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_de052.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-6H7l8p/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_de052.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_de052/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-jqi7FU"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-jqi7FU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-jqi7FU'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d9683/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d9683.dir/build.make CMakeFiles/cmTC_d9683.dir/build
+        Building C object CMakeFiles/cmTC_d9683.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_d9683.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_d9683.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_d9683/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lDtffK"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lDtffK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lDtffK'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_aad3a/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_aad3a.dir/build.make CMakeFiles/cmTC_aad3a.dir/build
+        Building C object CMakeFiles/cmTC_aad3a.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_aad3a.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lDtffK/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_aad3a.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_aad3a/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-57CV9i"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-57CV9i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-57CV9i'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cfd1c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_cfd1c.dir/build.make CMakeFiles/cmTC_cfd1c.dir/build
+        Building C object CMakeFiles/cmTC_cfd1c.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_cfd1c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_cfd1c.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_cfd1c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bI5tqV"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bI5tqV"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bI5tqV'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_623e7/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_623e7.dir/build.make CMakeFiles/cmTC_623e7.dir/build
+        Building C object CMakeFiles/cmTC_623e7.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_623e7.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bI5tqV/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_623e7.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_623e7/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-JCCiRL"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-JCCiRL"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-JCCiRL'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c44c4/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c44c4.dir/build.make CMakeFiles/cmTC_c44c4.dir/build
+        Building C object CMakeFiles/cmTC_c44c4.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_c44c4.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_c44c4.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_c44c4/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-aowEyc"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-aowEyc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-aowEyc'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8272b/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8272b.dir/build.make CMakeFiles/cmTC_8272b.dir/build
+        Building C object CMakeFiles/cmTC_8272b.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_8272b.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-aowEyc/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_8272b.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_8272b/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-kMVCAN"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-kMVCAN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-kMVCAN'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9a1ec/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9a1ec.dir/build.make CMakeFiles/cmTC_9a1ec.dir/build
+        Building C object CMakeFiles/cmTC_9a1ec.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_9a1ec.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_9a1ec.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_9a1ec/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-TX4rl6"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-TX4rl6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-TX4rl6'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0fff0/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0fff0.dir/build.make CMakeFiles/cmTC_0fff0.dir/build
+        Building C object CMakeFiles/cmTC_0fff0.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_0fff0.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-TX4rl6/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_0fff0.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_0fff0/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-qSWwst"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-qSWwst"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-qSWwst'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_252e0/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_252e0.dir/build.make CMakeFiles/cmTC_252e0.dir/build
+        Building C object CMakeFiles/cmTC_252e0.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_252e0.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_252e0.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_252e0/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bTMvBO"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bTMvBO"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bTMvBO'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_aad7f/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_aad7f.dir/build.make CMakeFiles/cmTC_aad7f.dir/build
+        Building C object CMakeFiles/cmTC_aad7f.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_aad7f.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-bTMvBO/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_aad7f.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_aad7f/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-f5pup6"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-f5pup6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-f5pup6'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b7206/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b7206.dir/build.make CMakeFiles/cmTC_b7206.dir/build
+        Building C object CMakeFiles/cmTC_b7206.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_b7206.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_b7206.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_b7206/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lZZoEW"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lZZoEW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lZZoEW'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_744b0/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_744b0.dir/build.make CMakeFiles/cmTC_744b0.dir/build
+        Building C object CMakeFiles/cmTC_744b0.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_744b0.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lZZoEW/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_744b0.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_744b0/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-rZfAxT"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-rZfAxT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-rZfAxT'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_29529/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_29529.dir/build.make CMakeFiles/cmTC_29529.dir/build
+        Building C object CMakeFiles/cmTC_29529.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_29529.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_29529.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_29529/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-oB48Hq"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-oB48Hq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-oB48Hq'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_25cbd/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_25cbd.dir/build.make CMakeFiles/cmTC_25cbd.dir/build
+        Building C object CMakeFiles/cmTC_25cbd.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_25cbd.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-oB48Hq/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_25cbd.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_25cbd/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-iaPmyF"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-iaPmyF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-iaPmyF'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d3099/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d3099.dir/build.make CMakeFiles/cmTC_d3099.dir/build
+        Building C object CMakeFiles/cmTC_d3099.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_d3099.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_d3099.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_d3099/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-rbAxp5"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-rbAxp5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-rbAxp5'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_05434/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_05434.dir/build.make CMakeFiles/cmTC_05434.dir/build
+        Building C object CMakeFiles/cmTC_05434.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_05434.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-rbAxp5/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_05434.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_05434/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lkgJjm"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lkgJjm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-lkgJjm'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_85931/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_85931.dir/build.make CMakeFiles/cmTC_85931.dir/build
+        Building C object CMakeFiles/cmTC_85931.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_85931.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_85931.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_85931/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-Rd32aS"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-Rd32aS"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-Rd32aS'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1ff72/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1ff72.dir/build.make CMakeFiles/cmTC_1ff72.dir/build
+        Building C object CMakeFiles/cmTC_1ff72.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_1ff72.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-Rd32aS/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_1ff72.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_1ff72/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/i686-w64-mingw32-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/3.29.2/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-Q9XDG5"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-Q9XDG5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-Q9XDG5'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f1ba7/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f1ba7.dir/build.make CMakeFiles/cmTC_f1ba7.dir/build
+        Building C object CMakeFiles/cmTC_f1ba7.dir/CMakeCCompilerABI.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk   -v -Wl,-v -o CMakeFiles/cmTC_f1ba7.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/i686-w64-mingw32-gcc
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        Target: i686-w64-mingw32
+        Configured with: ../configure --target=i686-w64-mingw32 --with-sysroot=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --prefix=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686 --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --enable-languages=c,c++,fortran --with-ld=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-ld --with-as=/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-i686/bin/i686-w64-mingw32-as --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=no --disable-multilib --disable-nls --enable-threads=posix
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        make[1]: *** [CMakeFiles/cmTC_f1ba7.dir/CMakeCCompilerABI.c.o] Error 1
+        make: *** [cmTC_f1ba7/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working C compiler: /opt/homebrew/bin/i686-w64-mingw32-gcc"
+    directories:
+      source: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-l2UhWY"
+      binary: "/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-l2UhWY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-l2UhWY'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_20fe0/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_20fe0.dir/build.make CMakeFiles/cmTC_20fe0.dir/build
+        Building C object CMakeFiles/cmTC_20fe0.dir/testCCompiler.c.o
+        /opt/homebrew/bin/i686-w64-mingw32-gcc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/cmTC_20fe0.dir/testCCompiler.c.o -c /Users/semoreas/Documents/PlatformIO/Projects/ESPRemote/build/CMakeFiles/CMakeScratch/TryCompile-l2UhWY/testCCompiler.c
+        i686-w64-mingw32-gcc: error: unrecognized command-line option '-arch'
+        make[1]: *** [CMakeFiles/cmTC_20fe0.dir/testCCompiler.c.o] Error 1
+        make: *** [cmTC_20fe0/fast] Error 2
+        
+      exitCode: 2
+...
