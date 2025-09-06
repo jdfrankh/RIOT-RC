@@ -23,9 +23,39 @@ The RIOT RC has the following basic specs
 | Analog Joysticks | 2 |
 | Buttons | 4 |
 
+# Hookup
+
+The pinout of the Receiver is the following:
+
+<img width="1001" height="634" alt="Screenshot 2025-09-06 at 12 33 19 AM" src="https://github.com/user-attachments/assets/480ee33d-c25c-42c9-8541-a58169aa7bda" />
 
 
+Attach your receiver as according to the diagram:
 
-## Simple edits
+<img width="1019" height="520" alt="Screenshot 2025-09-06 at 1 02 53 AM" src="https://github.com/user-attachments/assets/bb22b6ed-3aa3-4c2c-9c89-1583e719abd8" />
 
-To calcuatr
+# Basic Operation
+
+The staring operation of the remote goes as such.
+
+1. Start your remote
+2. Select your desired reciever by username
+3. Control your reciever
+
+The controls for selecting your receiver go as such:
+
+<img width="689" height="417" alt="Screenshot 2025-09-06 at 1 23 56 AM" src="https://github.com/user-attachments/assets/55943886-9c74-4ac4-98c8-31570566be78" />
+
+The OLED screen will display all **Powered** receivers automatically with their assigned name. Select one to automatically connect it. 
+
+The controls for the remote after the reciver go as such: 
+
+<img width="948" height="436" alt="Screenshot 2025-09-06 at 1 29 56 AM" src="https://github.com/user-attachments/assets/114bae18-ae3b-420b-93ce-6f1c298fa1e2" />
+
+Keep in mind that there is a **Software** based arming mechanism for the BLDC motor. The receiver will not activate it unless the arming command is first sent. It may take about 5 seconds to arm your receiver. **Please be cautious when actiavate the BLDC, as it's speed rating may be enough to harm.**
+
+The brushed motors are programmed to act as a drive, moving according to a two wheeled battlebot. Although the supply voltage is attached to the motor drive, the original code is deisgned around a 6V N20, and thus creates a PWM signal to prevent users from frying the motor. To change this. Please refer to the **Change code** section for more information.
+
+## Simple edits - Uploading Sketches
+
+Many values as of right now are hard-coded into the remote
