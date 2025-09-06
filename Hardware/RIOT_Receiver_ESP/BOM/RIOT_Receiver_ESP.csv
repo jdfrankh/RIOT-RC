@@ -1,0 +1,29 @@
+Reference,Value,Footprint,Digikey Link to Item,Qty
+AE1,Antenna_Shield,Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical,https://www.digikey.com/en/products/detail/hirose-electric-co-ltd/U-FL-R-SMT-1-60/4285475,1
+C1,100uF,Capacitor_SMD:C_Elec_8x10.2,https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEH-ZL1V820P/22494089?s=N4IgTCBcDaIKJwBIC0AyBGAagDjABgAUACEAXQF8g,1
+"C2,C18",1 uF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,2
+C3,2.2uF,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,,1
+C4,1.2pF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+C5,1.6pF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+"C6,C11,C13",1uF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,3
+"C7,C14,C17,C21,C22",.1uF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,5
+C8,10uF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+"C9,C12",12pF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,2
+C10,10nF,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+"C19,C20,R5",DNP,"Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder",,3
+D1,RED,LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder,,1
+D2,GREEN,LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder,,1
+D3,YELLOW,LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder,,1
+J5,USB_C_Receptacle_USB2.0_16P,Connector_USB:USB_C_Receptacle_GCT_USB4085,https://www.digikey.com/en/products/detail/gct/USB4085-GF-A/9859662?s=N4IgTCBcDaIK4GcBGAWADADgKwgLoF8g,1
+L1,2n2,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,,1
+L2,24nH,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,,1
+L3,2 nH,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,,1
+"R1,R2,R3",1k,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,3
+R4,0R5 (.5),Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder,,1
+R11,10k,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,1
+"R12,R13",0R,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,2
+"R14,R15",5.1k,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,2
+U1,ESP32-C3FH,Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm,https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3FH4X/24366489?s=N4IgTCBcDaIKYGcAOBmMBjFAzAFiAugL5A,1
+"U2,U4",DRV8231DSGR,_Ti_Motor_Drivers:WSON8_DRV8231_TEX,https://www.digikey.com/en/products/detail/texas-instruments/DRV8231DSGR/15853798?s=N4IgTCBcDaICICUBqAOMBmAjHAygcQRAF0BfIA,2
+U3,S-1214 3.3V Regulator,Package_TO_SOT_SMD:TO-252-5_TabPin3,https://www.digikey.com/en/products/detail/ablic-inc/S-1214B33H-V5T2U7/13401704,1
+X1,ASV-40MHz,Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm,https://www.digikey.com/en/products/detail/kyocera-avx/CX3225SA40000D0PTWCC/9698138,1

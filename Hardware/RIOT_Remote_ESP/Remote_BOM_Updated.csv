@@ -1,0 +1,26 @@
+Value,Reference,Footprint,Digikey Link to Item,Qty
+MCP73831-2-OT,U9,Package_TO_SOT_SMD:SOT-23-5,https://www.digikey.com/en/products/filter/battery-chargers/781?s=N4IgTCBcDaILIGEAKB2AzADjQRhAXQF8g,1
+ASV-40MHz,X1,Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm_HandSoldering,https://www.digikey.com/en/products/detail/kyocera-avx/CX3225SA40000D0PTWCC/9698138,1
+TPS63031DSK,U3,Package_SON:WSON-10-1EP_2.5x2.5mm_P0.5mm_EP1.2x2mm,https://www.digikey.com/en/products/detail/texas-instruments/TPS63031DSKR/2048021,1
+ESP32-C3FH,U1,Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm,https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3FH4X/24366489?s=N4IgTCBcDaIKYGcAOBmMBjFAzAFiAugL5A,1
+SM6T10A,D1,Diode_SMD:D_SMB,https://www.digikey.com/en/products/detail/stmicroelectronics/SM6T10A/1039070,1
+USB_C_Receptacle_USB2.0_16P,J2,Connector_USB:USB_C_Receptacle_GCT_USB4085,https://www.digikey.com/en/products/detail/gct/USB4085-GF-A/9859662?s=N4IgTCBcDaIK4GcBGAWADADgKwgLoF8g,1
+Antenna_Shield,AE1,Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical,https://www.digikey.com/en/products/detail/hirose-electric-co-ltd/U-FL-R-SMT-1-60/4285475,1
+12pF,"C1,C2",Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,2
+10uF,"C3,C27,C28,C29","Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder",,4
+1uF,"C5,C8,C24",Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,3
+1p2,C11,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+100uF,C13,Capacitor_SMD:CP_Elec_4x5.4,,1
+100nF,"C14,C23,C21,C22,C4,C6,C7,C26",Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,8
+1p6,C15,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+10nF,C16,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+4.7uF,C25,Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,,1
+YELLOW,D2,LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder,,1
+24nH,L1,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,,1
+2 nH,L2,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,,1
+2n2,"L3,L4",Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,,2
+1.5uH,L5,Inductor_SMD:L_Coilcraft_LPS3010,,1
+470,R2,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,1
+2k,R3,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,1
+10k,R4,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,1
+5.1k,"R14,R15,R5,R6,R7,R8,R12,R13",Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,,8
