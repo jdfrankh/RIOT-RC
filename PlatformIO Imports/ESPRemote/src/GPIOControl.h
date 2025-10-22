@@ -32,22 +32,24 @@ void inputPinsSetup(const uint8_t inputs[]){
 
 
 int readPin(uint8_t pin, int type){
+    if(type == DIGITALPIN) {
+        return digitalRead(pin);
+    } else if(type == ANALOGPIN) {
+        return analogRead(pin);
+    }
 
-    if(type == DIGITALPIN)
-    return(digitalRead(pin));
-    else if(type == ANALOGPIN)
-    return(analogRead(pin));
+    // If an unknown type was passed, return 0 as a safe default
+    return 0;
 
 }
 
 pinData readControls(const uint8_t regButtons[], const uint8_t analogButtons[]){
     pinData temp;
-    int j = 0;
 
-    for(int i = 0; i < 4; i++){
+    for(int i = 0; i < sizeof(regButtons); i++){
         temp.buttons[i] = digitalRead(regButtons[i]);
     }
-    for(int i = 0; i < 4; i++){
+    for(int i = 0; i < sizeof(analogButtons); i++){
 
         temp.joysticks[i] = analogRead(analogButtons[i]);
     }

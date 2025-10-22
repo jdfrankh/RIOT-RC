@@ -20,7 +20,6 @@ esp_err_t ESPNowW32::add_peer(uint8_t *mac, int channel) {
     esp_now_peer_info_t &peer = peers.back();
     std::memcpy(peer.peer_addr, mac, sizeof(peer.peer_addr));
     peer.channel = channel;
-    //esp_wifi_set_channel(channel,WIFI_SECOND_CHAN_NONE));
     peer.ifidx = WIFI_IF_STA;
     auto success = esp_now_add_peer(&peers.back());
     if (success != ESP_OK)
@@ -44,9 +43,9 @@ esp_err_t ESPNowW32::send_message(uint8_t *mac, Container d) {
     return esp_now_send(mac, d.bytes, d.length);
 }
 
-
 esp_err_t ESPNowW32::set_mac(uint8_t *mac) {
-    // Use esp_wifi_set_mac to set the base MAC address on Arduino/ESP-IDF
+    // Set the MAC address for the station interface using esp_wifi API
+    // esp_wifi_set_mac returns esp_err_t which matches the function signature
     return esp_wifi_set_mac(WIFI_IF_STA, mac);
 }
 ESPNowW32 espnow;

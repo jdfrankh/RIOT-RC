@@ -6,7 +6,7 @@
 #include "esp_wifi.h"
 #include <ESP32Servo.h>
 #include <vector>
-
+#include "ESC.h" // RC_ESP library installed by Library Manager
 
 const uint8_t broadcastAddress[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 int timeout = 0;
@@ -23,8 +23,8 @@ bool receivedRemoteSignal = false;
 #define ESC2 1
 
 //Servo library defaults from 20 to 180
-#define ESCARMDISTANCE 20
-#define ESCATTACKDISTANCE 180
+#define ESCSMINDISTANCE 1000
+#define ESCMAXDISTANCE 1900
 
 #define SERVO1 10
 #define SERVO2 7
@@ -41,102 +41,18 @@ bool receivedRemoteSignal = false;
 #define LED3 6
 
 
-
-struct Objects{
-  Servo* item;
-  uint8_t id; 
-  uint8_t pin;
-
-  uint16_t PwmMax, PwmMin, hertz;
-  uint16_t armValue, attackValue;
-
-  enum Items{
-    ESC = 0,
-    SERVO = 1,
-    PWM = 2
-  };
-
-  
-
-  Objects(Servo* s, uint8_t i, uint8_t p) : item(s), id(i), pin(p) {
-
-    pinMode(pin, OUTPUT);
-    switch(id){
-      case ESC:
-        PwmMax = 1000;
-        PwmMin = 2000;
-        
-        hertz = 50;
-      break;
-      case SERVO:
-        PwmMax = 544;
-        PwmMin = 2400;
-        hertz = 50;
-      break;
-      case PWM:
-        PwmMax = 1200;
-        PwmMin = 1800;
-        hertz = 50;
-      break;
-      default:
-        PwmMax = 0;
-        PwmMin = 0;
-        hertz = 0;
-      break;
-    }
-  
-  }
-
-  void attach(){
-    item->setPeriodHertz(hertz);
-    item->attach(pin, PwmMin, PwmMax);
-  }
-
-  void arm(){
-    // Values range between - and 180
-    switch(id){
-      case ESC:
-        item->write(ESCARMDISTANCE);
-      break;
-      case SERVO:
-        item->write(SERVOARMANGLE);
-      break;
-      default:
-        item->write(90);
-      break;
-    }
-    
-  }
-
-  void interact(){
-    switch(id){
-      case ESC:
-        item->write(ESCATTACKDISTANCE);
-      break;
-      case SERVO:
-        item->write(SERVOATTACKANGLE);
-      break;
-      default:
-        item->write(90);
-      break;
-  }
-  }
-
-  void stop(){
-    arm();
-  }
-
-
-};
-
-std::vector<Objects*> Interactables; // Motors, ESCS, PWM
+Servo FirstESC;
+float escSpeed1 = 0;
+ESC SecondESC(ESC2, 1000, 2000, 1000); 
+uint16_t escSpeed2 = 0;
+bool ESCArm[2] = {false, false};
 
 
 
 
 
 //struct __attribute__((packed)) Message{
-  const char id[20] = "allahWarrior420";
+  const char id[20] = "Spenc";
 //};
 
 
@@ -150,6 +66,7 @@ struct __attribute__((packed)) sendData{
     uint8_t dcMagnitude[2] = {0,0}; //Should be between 0 and 100
     bool objectArm[6]; // For escs, arm them, for servos, set to zero degrees? or fixable value
     bool objectRun[6]; 
+    float escSpeed = .25; 
 
     bool connectCheck = false;
 };
@@ -183,19 +100,23 @@ bool waitingForResponse(){
 
 //}
 
-void onReceive(const uint8_t *recv_info, const uint8_t *incomingData, int len) {
+void onReceive(const esp_now_recv_info *mac_info, const uint8_t *incomingData, int len) {
+  const uint8_t *recv_info = mac_info->src_addr;
   
   if (len == sizeof(sendData)) {
     Serial.println("Data received from remote!"); 
     memcpy(&sD, incomingData, sizeof(sendData));
 
     //Serial.printf("%02x ,%02x,%02x,%20x: ", sD.Direction[0], sD.Direction[1], sD.objectRun[0], sD.objectArm[0]);
-    for(size_t i= 0; i < len; i++){
-      Serial.printf("%02X,", incomingData[i]);
-    }
-    Serial.printf("Length: %d", len);
-    Serial.printf(": %d", sD.Direction[0]);
-    Serial.println();
+  //  for(size_t i= 0; i < len; i++){
+  //    Serial.printf("%02X,", incomingData[i]);
+  //  }
+  //  Serial.printf("Length: %d", len);
+  //  Serial.printf(": %d", sD.Direction[0]);
+  //  Serial.println();
+
+  //Serial.printf("Arm 0: %d, Arm 1: %d, Interact 0: %d, Interact 1: %d" , sD.objectArm[0],sD.objectArm[1], sD.objectRun[0], sD.objectRun[1] );
+  //Serial.println();
 
     if (!esp_now_is_peer_exist(sD.macHandshake)) {
     Serial.println("Adding peer");
@@ -205,6 +126,8 @@ void onReceive(const uint8_t *recv_info, const uint8_t *incomingData, int len) {
     digitalWrite(LED2, HIGH);
     timeout = 1000;
 
+
+
     if(sD.macHandshake[5] == macAddress[5] && sD.macHandshake[4] == macAddress[4] && sD.macHandshake[3] == macAddress[3] ){
       digitalWrite(LED3, HIGH);
     }
@@ -213,10 +136,6 @@ void onReceive(const uint8_t *recv_info, const uint8_t *incomingData, int len) {
     Serial.print("Unexpected message length: ");
     Serial.println(len);
   }
-  /*
-  
-  }
-  */
 
 
 }
@@ -225,58 +144,86 @@ void onReceive(const uint8_t *recv_info, const uint8_t *incomingData, int len) {
 
 
 void mapFunction(){
-  int i = 0;
-  for(auto obj : Interactables){
-    if(Interactables.size() != i){
-      if(sD.objectArm[i]){
-        obj->arm(); 
-      }
-      if(sD.objectRun[i]){
-        obj->interact();
-      }
-      else{
-        obj->stop();
-      }
-    i++;
-    }
+//  Serial.println("Mapping");
+
+  if(sD.objectArm[0]){
+    digitalWrite(LED3, HIGH);
+    Serial.println("Arming");
+    FirstESC.detach();
+
+    //digitalWrite(ESC2, LOW);
+    delay(100);
+    FirstESC.attach(ESC2); // Send the Arm command to ESC
+    FirstESC.writeMicroseconds(ESCSMINDISTANCE);
+
+
+    ESCArm[0] = true;
+    Serial.println("Done Arming");
   }
+
+  if(ESCArm[0] && sD.objectRun[0]){
+    
+    if(escSpeed1 < (ESCMAXDISTANCE - ESCSMINDISTANCE)){ // Should be 7000
+      escSpeed1+= sD.escSpeed;
+    }
+
+    FirstESC.writeMicroseconds(ESCSMINDISTANCE + int(escSpeed1) );
+    digitalWrite(LED3, HIGH);
+  }
+  else if(!ESCArm[0]){
+    //do nothing
+  }
+  else{
+    digitalWrite(LED3, LOW);
+    Serial.println("Stopping");
+    if(escSpeed1 > 0){
+      escSpeed1-=sD.escSpeed; 
+    }
+    FirstESC.writeMicroseconds(ESCSMINDISTANCE+ escSpeed1);
+  }
+
+  //Serial.printf("Max: %d : %d", sD.DcMax[0], sD.DcMax[1]);
+  //Serial.println();
+
+  //Serial.printf("Min: %d : %d", sD.DcMin[0], sD.DcMin[1]);
+  //Serial.println();
 
   switch(sD.Direction[0]){
     case 0: // Stop
-      digitalWrite(Mot1, LOW);
-      digitalWrite(Mot2, LOW);
-      digitalWrite(Mot3, LOW);
-      digitalWrite(Mot4, LOW);
+      analogWrite(Mot1, sD.DcMin[0]);
+      analogWrite(Mot2, sD.DcMin[0]);
+      analogWrite(Mot3, sD.DcMin[1]);
+      analogWrite(Mot4, sD.DcMin[1]);
     break;
     case 1: // Forward
-      digitalWrite(Mot1, HIGH);
-      digitalWrite(Mot2, LOW);
-      digitalWrite(Mot3, HIGH);
-      digitalWrite(Mot4, LOW);
+      analogWrite(Mot1, sD.DcMax[0]);
+      analogWrite(Mot2, sD.DcMin[0]);
+      analogWrite(Mot3, sD.DcMax[1]);
+      analogWrite(Mot4, sD.DcMin[1]);
     break;
     case 2: // Backward
-      digitalWrite(Mot1, LOW);
-      digitalWrite(Mot2, HIGH);
-      digitalWrite(Mot3, LOW);
-      digitalWrite(Mot4, HIGH);
+      analogWrite(Mot1, sD.DcMin[0]);
+      analogWrite(Mot2, sD.DcMax[0]);
+      analogWrite(Mot3, sD.DcMin[1]);
+      analogWrite(Mot4, sD.DcMax[1]);
     break;
     case 3: // Left
-      digitalWrite(Mot1, LOW);
-      digitalWrite(Mot2, HIGH);
-      digitalWrite(Mot3, HIGH);
-      digitalWrite(Mot4, LOW);
+      analogWrite(Mot1, sD.DcMin[0]);
+      analogWrite(Mot2, sD.DcMax[0]);
+      analogWrite(Mot3, sD.DcMax[1]);
+      analogWrite(Mot4, sD.DcMin[1]);
     break;
     case 4: // Right
-      digitalWrite(Mot1, HIGH);
-      digitalWrite(Mot2, LOW);
-      digitalWrite(Mot3, LOW);
-      digitalWrite(Mot4, HIGH);
+      analogWrite(Mot1, sD.DcMax[0]);
+      digitalWrite(Mot2, sD.DcMin[0]);
+      digitalWrite(Mot3, sD.DcMin[1]);
+      analogWrite(Mot4, sD.DcMax[1]);
     break;
     default:
-      digitalWrite(Mot1, LOW);
-      digitalWrite(Mot2, LOW);
-      digitalWrite(Mot3, LOW);
-      digitalWrite(Mot4, LOW);
+      analogWrite(Mot1, sD.DcMin[0]);
+      analogWrite(Mot2, sD.DcMin[0]);
+      analogWrite(Mot3, sD.DcMin[1]);
+      analogWrite(Mot4, sD.DcMin[1]);
     break;
 
   };
@@ -287,18 +234,9 @@ void mapFunction(){
 void setup() {
 //  delay(10000);
   Serial.begin(115200);
+ // delay(1000);
 
-  Interactables.push_back(new Objects(new Servo, Objects::ESC, ESC1)); 
-  Interactables.push_back(new Objects(new Servo, Objects::ESC, ESC2));
-  Interactables.push_back(new Objects(new Servo, Objects::SERVO, SERVO1));
-  Interactables.push_back(new Objects(new Servo, Objects::SERVO, SERVO2));
-  Interactables.push_back(new Objects(new Servo, Objects::PWM, PWM1));
-  Interactables.push_back(new Objects(new Servo, Objects::PWM, PWM2));
-
-  for (auto& obj : Interactables) {
-    // You can access each Objects* as 'obj' here
-    obj->attach();
-  }
+  //delay(250);
 
   pinMode(Mot1, OUTPUT);
   pinMode(Mot2, OUTPUT);
@@ -308,7 +246,8 @@ void setup() {
   pinMode(LED2, OUTPUT);
   pinMode(LED3, OUTPUT);
 
-  
+//  pinMode(ESC1, OUTPUT);
+ // pinMode(ESC2, OUTPUT);   
 
   digitalWrite(LED1,LOW);
   digitalWrite(LED2, LOW);
@@ -318,6 +257,7 @@ void setup() {
   digitalWrite(Mot2, LOW);
   digitalWrite(Mot3, LOW);
   digitalWrite(Mot4, LOW);
+
 
 
   //ESP_ERROR_CHECK(esp_wifi_set_channel(chan,WIFI_SECOND_CHAN_NONE));
